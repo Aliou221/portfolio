@@ -73,7 +73,7 @@ export default function FormContact() {
       )}
 
       {successMessage && (
-        <p className="text-green-500 text-sm p-3 mb-3 rounded-md bg-green-200/20 ">
+        <p className="text-green-500 text-sm p-3 mb-3 rounded-md bg-green-200/20 flex items-center gap-1">
           <CheckCircleIcon className='size-6'/>
           {successMessage}
         </p>
