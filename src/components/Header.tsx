@@ -1,0 +1,93 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { BtnLink } from "./ui/utils";
+import imageLogo from "/logo.png";
+
+export default function Header() {
+
+  const myLinks: string[] = ["Accueil", "A propos", "Compétences", "Réalisations"];
+  const linkID: string[] = ["#", "#propos", "#competences", "#realisations"];
+  
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="bg-[#f3f3f30a] z-50 backdrop-blur-lg sticky top-0 border-b border-gray-600">
+      <div className="mx-auto max-w-[1024px] w-full p-4">
+        <nav className="flex items-center justify-between">
+            <a
+              href="#"
+              className="logo flex items-center gap-2 text-xl font-bold text-white"
+            >
+              <img src={imageLogo} alt="Logo" className="size-10 rounded-full" />
+              AliouDev
+            </a>
+
+            {/* Menu Desktop */}
+            <ul className="hidden md:flex items-center gap-5">
+              {myLinks.map((linkItem, index) => (
+                <li key={index}>
+                  <a
+                    href={linkID[index]}
+                    onClick={() => setActiveIndex(index)}
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-all ease-out duration-300
+                    ${ index === 0
+                      ? "bg-white text-gray-900 font-bold"
+                      : "text-white hover:text-gray-900 hover:bg-white hover:font-medium"
+                    }`}
+                  >
+                    {linkItem}
+                  </a>
+                </li>
+              ))}
+              <BtnLink
+                link="#contact"
+                text="Contact"
+                style="bg-white text-gray-900"
+              />
+            </ul>
+
+            {/* Bouton Menu Mobile */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden block text-white z-50"
+            >
+              {isOpen ? <X className="size-8" /> : <Menu className="size-8" />}
+            </button>
+        </nav>
+
+        {/* Menu Mobile Overlay */}
+        <div
+          className={`nav fixed top-0 left-0 w-full h-screen bg-[#131111]/95 backdrop-blur-2xl z-40 flex flex-col items-start p-3 justify-center gap-6 transform transition-transform duration-300
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        >
+          <ul className="flex flex-col w-full items-start gap-6 text-lg">
+            {myLinks.map((linkItem, index) => (
+              <li key={index} className="w-full anime flex-1">
+                  <a
+                    href={linkID[index]}
+                    onClick={() => {
+                      setActiveIndex(index);
+                      setIsOpen(false);
+                    }}
+                    className={`${activeIndex === index ? 'textwhite font-bold border-b-2 border-gray-500' : ''} px-4 w-full block py-2 rounded-md transition-all ease-out duration-300
+                    text-white hover:bg-gray-800 font-medium focus:text-red-700`
+                    }
+                  >
+                  {linkItem}
+                  </a>
+              </li>
+            ))}
+          </ul>
+            
+          <BtnLink
+            click={() =>  setIsOpen(false) }
+            link="#contact"
+            text="Contact"
+            style="bg-gradient-to-br from-gray-500 to-gray-300 text-gray-900 w-full text-center"
+          />
+        </div>
+      </div>
+    </header>
+  );
+}

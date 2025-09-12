@@ -1,0 +1,20 @@
+export const cColor        : string = 'text-blue-900';
+export const jsColor       : string = 'text-yellow-400';
+export const tsColor       : string = 'text-blue-700';
+export const cssColor      : string = 'text-blue-500';
+export const phpColor      : string = 'text-purple-500';
+export const sqlColor      : string = 'text-gray-500';
+export const javaColor     : string = 'text-red-700';
+export const htmlColor     : string = 'text-orange-500';
+export const dartColor     : string = 'text-blue-400';
+
+export const reactColor    : string = 'text-cyan-500';
+export const nextColor     : string = 'text-black';
+export const jdbcColor     : string = 'text-green-500';
+export const angularColor  : string = 'text-[#f10859]';
+export const laravelColor  : string = 'text-red-500';
+export const flutterColor  : string = 'text-[#45d0fc]';
+export const flatlafColor  : string = 'text-gray-500';
+export const tailwindColor : string = 'text-[#30bdf6]';
+export const bootstrapColor: string = 'text-purple-700';
+export const miglayoutColor: string = 'text-yellow-600';
