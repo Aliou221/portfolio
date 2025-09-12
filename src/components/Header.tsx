@@ -24,7 +24,7 @@ export default function Header() {
             </a>
 
             {/* Menu Desktop */}
-            <ul className="hidden md:flex items-center gap-5">
+            <ul className="hidden min-[800px]:flex items-center gap-2">
               {myLinks.map((linkItem, index) => (
                 <li key={index}>
                   <a
@@ -43,14 +43,14 @@ export default function Header() {
               <BtnLink
                 link="#contact"
                 text="Contact"
-                style="bg-white text-gray-900"
+                style="bg-white px-3 py-2 text-gray-900"
               />
             </ul>
 
             {/* Bouton Menu Mobile */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden block text-white z-50"
+              className="min-[800px]:hidden block text-white z-50"
             >
               {isOpen ? <X className="size-8" /> : <Menu className="size-8" />}
             </button>
@@ -70,8 +70,8 @@ export default function Header() {
                       setActiveIndex(index);
                       setIsOpen(false);
                     }}
-                    className={`${activeIndex === index ? 'textwhite font-bold border-b-2 border-gray-500' : ''} px-4 w-full block py-2 rounded-md transition-all ease-out duration-300
-                    text-white hover:bg-gray-800 font-medium focus:text-red-700`
+                    className={`${activeIndex === index ? 'text-white font-bold border-b-2 border-gray-500' : ''} px-4 w-full block py-2 rounded-md transition-all ease-out duration-300
+                    text-white hover:bg-gray-800 font-medium focus:text-gray-400`
                     }
                   >
                   {linkItem}
@@ -84,7 +84,7 @@ export default function Header() {
             click={() =>  setIsOpen(false) }
             link="#contact"
             text="Contact"
-            style="bg-gradient-to-br from-gray-500 to-gray-300 text-gray-900 w-full text-center"
+            style="bg-gradient-to-br from-gray-500 to-gray-300 text-gray-900 px-3 py-2 w-[90%] self-center text-center"
           />
         </div>
       </div>

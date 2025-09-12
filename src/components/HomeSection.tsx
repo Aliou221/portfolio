@@ -30,7 +30,7 @@ export default function HomeSection() {
         </p>
       </div>
 
-      <div className="flex anime items-center gap-5 ">
+      <div className="flex flex-col min-[415px]:flex-row anime items-center gap-5 ">
         <BtnLink link={monCv} downloaded={true} text="Télécharger mon CV" style="bg-white text-gray-900" />
         <BtnLink link="#contact" text="Contactez-moi" style="bg-black text-white" />
       </div>

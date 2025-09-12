@@ -29,7 +29,7 @@ export function BtnLink({
     downloaded?: boolean
     target?: string
   }) {
-  return <a href={link} target={target} download={downloaded} onClick={click} className={`${style} hover:scale-[1.098] transition-all ease-in-out shadow-2xl text-sm font-bold px-5 py-3 rounded-md`}>
+  return <a href={link} target={target} download={downloaded} onClick={click} className={`${style} hover:scale-[1.098] transition-all ease-in-out shadow-2xl text-sm font-bold px-3 py-2 rounded-md`}>
           {text}
         </a>
 }

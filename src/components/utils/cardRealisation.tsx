@@ -38,7 +38,7 @@ export default function CardRealisations({
           </div>
         </div>
 
-        <div className="flex items-end justify-between">
+        <div className="flex items-end flex-wrap-reverse gap-2 justify-between">
           <div className="flex flex-wrap gap-2 items-center">{children}</div>
           <div className="flex items-center gap-3">
             <a href={site} target="_blank">

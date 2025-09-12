@@ -9,7 +9,7 @@ export default function Realisations() {
   return (
     <section className="py-4 scroll-mt-24" id="realisations">
       <TitleSection title='Réalisations'/>
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+      <div className="grid min-[935px]:grid-cols-3  min-[615px]:grid-cols-2  gap-4">
         {realisationsLists.map((card, idx) => (
           <CardRealisations 
             key={idx}
