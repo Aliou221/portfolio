@@ -5,8 +5,8 @@ import imageLogo from "/logo.png";
 
 export default function Header() {
 
-  const myLinks: string[] = ["Accueil", "A propos", "Compétences", "Réalisations"];
-  const linkID: string[] = ["#", "#propos", "#competences", "#realisations"];
+  const myLinks: string[] = ["Accueil", "A propos", "Compétences", "Services", "Réalisations"];
+  const linkID: string[] = ["#", "#propos", "#competences", "#services", "#realisations"];
   
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);

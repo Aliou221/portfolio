@@ -16,16 +16,18 @@ export default function MyCard(
     useAnimation('.anime-card-propos', 0.4)
 
     return (
-        <Card  className={`anime-card-propos duration-700 ease-out transform  flex-1 cursor-pointer backdrop-blur-2xl border bg-[#55555531] card p-3  border-zinc-600 shadow-md transition-all`}>
-            <div className='flex items-center gap-2'>
-                { children }
-                <CardTitle className="font-bold text-xl flex items-center gap-2 text-white">
-                    { title }
-                </CardTitle>
-            </div>
-            <CardDescription className="font-medium text-gray-100 text-sm">
-                { contenu }
-            </CardDescription>
-        </Card>
+        <div className="anime-card-propos flex-1">
+            <Card  className={`duration-300 h-full  hover:scale-[1.0189] hover:bg-zinc-900/80  ease-out transform cursor-pointer backdrop-blur-2xl border bg-[#55555531] card p-3  border-zinc-600 shadow-md transition-all`}>
+                <div className='flex items-center gap-2'>
+                    { children }
+                    <CardTitle className="font-bold text-xl flex items-center gap-2 text-white">
+                        { title }
+                    </CardTitle>
+                </div>
+                <CardDescription className="font-medium text-gray-100 text-sm">
+                    { contenu }
+                </CardDescription>
+            </Card>
+        </div>
     )
 }

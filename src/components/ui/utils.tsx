@@ -1,6 +1,7 @@
 import { Github, Linkedin } from "lucide-react"
 import { Badge } from "./badge";
 import type { MouseEventHandler } from "react";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 
 export function TitleSection({ 
@@ -18,15 +19,17 @@ export function BtnLink({
     text, 
     style, 
     click,
-    target
+    target,
+    downloaded
   }: {
     link : string, 
     text : string, 
     style: string, 
     click?: MouseEventHandler<HTMLAnchorElement>
+    downloaded?: boolean
     target?: string
   }) {
-  return <a href={link} target={target} onClick={click} className={`${style} hover:scale-[1.098] transition-all ease-in-out shadow-2xl text-sm font-bold px-5 py-3 rounded-md`}>
+  return <a href={link} target={target} download={downloaded} onClick={click} className={`${style} hover:scale-[1.098] transition-all ease-in-out shadow-2xl text-sm font-bold px-5 py-3 rounded-md`}>
           {text}
         </a>
 }
@@ -46,10 +49,13 @@ export function MyLinkIcon({
           aria-label={areaLabel}
         >
           {
-            areaLabel === "LinkedIn" ? 
-            <Linkedin className="w-8 h-8 text-white transition-all bg-gray-500 shadow-md p-1 rounded-md" /> 
-            : 
-            <Github className="w-8 h-8 text-white shadow-md transition-all bg-gray-900 p-1 rounded-md" />
+            areaLabel === "LinkedIn" ? (
+              <Linkedin className="w-8 h-8 text-white transition-all bg-blue-500 shadow-md p-1 rounded-md" />
+            ) : areaLabel === "Email" ? (
+              <EnvelopeIcon className="w-8 h-8 text-white shadow-md transition-all bg-zinc-700 p-1 rounded-md" />
+            ) : (
+              <Github className="w-8 h-8 text-white shadow-md transition-all bg-black p-1 rounded-md" />
+            )
           }
         </a>
 }

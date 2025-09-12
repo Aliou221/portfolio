@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import HomeSection from "./components/HomeSection";
 import Propos from "./components/Propos";
 import Realisations from "./components/Realisations";
+import Services from "./components/Services";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <HomeSection />
         <Propos  />
         <Competences />
+        <Services/>
         <Realisations />
         <Contact/>
       </div>
