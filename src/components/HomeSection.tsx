@@ -1,6 +1,8 @@
 import logoImage from "/img-me.png"
+import monCv from "@/assets/pdf/Cv_Aliou_Cisse.pdf"
 import { BtnLink, MyLinkIcon } from "./ui/utils"
 import { useAnimation } from "./utils/animation";
+
 
 export default function HomeSection() {
 
@@ -29,8 +31,8 @@ export default function HomeSection() {
       </div>
 
       <div className="flex anime items-center gap-5 ">
-        <BtnLink link="#" text="Voir mon CV" style="bg-white text-gray-900" />
-        <BtnLink link="#" text="Me Contacter" style="bg-gray-900 text-white" />
+        <BtnLink link={monCv} target="_blank" text="Voir mon CV" style="bg-white text-gray-900" />
+        <BtnLink link="#contact" text="Me Contacter" style="bg-gray-900 text-white" />
       </div>
 
       <div className="flex anime items-center gap-5 my-6">

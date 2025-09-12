@@ -18,13 +18,15 @@ export function BtnLink({
     text, 
     style, 
     click,
+    target
   }: {
     link : string, 
     text : string, 
     style: string, 
     click?: MouseEventHandler<HTMLAnchorElement>
+    target?: string
   }) {
-  return <a href={link} onClick={click} className={`${style} hover:scale-[1.098] transition-all ease-in-out shadow-2xl text-sm font-bold px-5 py-3 rounded-md`}>
+  return <a href={link} target={target} onClick={click} className={`${style} hover:scale-[1.098] transition-all ease-in-out shadow-2xl text-sm font-bold px-5 py-3 rounded-md`}>
           {text}
         </a>
 }
