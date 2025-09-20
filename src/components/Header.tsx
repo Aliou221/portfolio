@@ -30,10 +30,10 @@ export default function Header() {
                   <a
                     href={linkID[index]}
                     onClick={() => setActiveIndex(index)}
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-all ease-out duration-300
+                    className={`px-3 py-2 text-sm border-b-2 font-medium rounded-md transition-all ease-out duration-300
                     ${ index === 0
-                      ? "bg-white text-gray-900 font-bold"
-                      : "text-white hover:text-gray-900 hover:bg-white hover:font-medium"
+                      ? "text-white border-b-2 font-bold border-gray-500"
+                      : "text-white hover:border-gray-500 hover:font-bold border-b-2 border-transparent"
                     }`}
                   >
                     {linkItem}
@@ -74,7 +74,7 @@ export default function Header() {
                     text-white hover:bg-gray-800 font-medium focus:text-gray-400`
                     }
                   >
-                  {linkItem}
+                  { linkItem }
                   </a>
               </li>
             ))}

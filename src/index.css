@@ -94,7 +94,7 @@ body {
 }
 
 .active {
-  @apply text-gray-900 bg-white font-bold;
+  @apply text-white font-bold border-gray-500;
 }
 
 .anime,
