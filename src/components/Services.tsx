@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <section className="min-h-[70vh]" id="services">
       <TitleSection title="Mes Services" />
-        <div className="min-[590px]:grid-cols-2 grid gap-6 flex  min-[856px]:grid-cols-3">
+        <div className="min-[590px]:grid-cols-2 grid gap-6 min-[856px]:grid-cols-3">
           <MyCard 
             title="Sites Web Vitrine"
             contenu={

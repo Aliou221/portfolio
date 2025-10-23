@@ -10,7 +10,7 @@ import bootstrapIcon from '@/assets/competences/frameworks/bootstrap.png'
 import tailwindIcon from '@/assets/competences/frameworks/tailwind-icon.png'
 import reactIcon from '@/assets/competences/frameworks/react.svg'
 import nextIcon from '@/assets/competences/frameworks/next.ico'
-import angularIcon from '@/assets/competences/frameworks/angular.png'
+// import angularIcon from '@/assets/competences/frameworks/angular.png'
 import laravelIcon from '@/assets/competences/frameworks/laravel.png'
 import vscodeIcon from '@/assets/competences/outils/vs-code.png'
 import androidStudioIcon from '@/assets/competences/outils/android-studio.webp'
@@ -33,7 +33,7 @@ export const frameworkLists = [
   { 'icon': tailwindIcon,  'text': 'Tailwind',  'color': 'text-[#30bdf6]' },
   { 'icon': reactIcon,     'text': 'React',     'color': 'text-cyan-500' },
   { 'icon': nextIcon,      'text': 'Next.js',   'color': 'text-black' },
-  { 'icon': angularIcon,   'text': 'Angular',   'color': 'text-[#f10859]' },
+  // { 'icon': angularIcon,   'text': 'Angular',   'color': 'text-[#f10859]' },
   { 'icon': laravelIcon,   'text': 'Laravel',   'color': 'text-red-500' },
 ];
 
